@@ -11,3 +11,4 @@ $data = json_decode($jsonData, true);
 
 // Output the JSON data
 echo json_encode($data);
+?>
