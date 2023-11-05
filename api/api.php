@@ -1,16 +1,5 @@
 <?php
+header('Content-Type: application/json'); // Ensure this is the very first thing in your file.
 
-// Set header for JSON content
-header('Content-Type: application/json');
-
-/*
-// Read JSON file
-$jsonData = file_get_contents('api.json');
-
-// Decode JSON data to PHP associative array
-$data = json_decode($jsonData, true);
-*/
-
-// Output the JSON data
+// Rest of your code
 echo '{"secret":"The cake is a lie"}';
-?>
