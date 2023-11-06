@@ -1,5 +1,14 @@
 <?php
-header('Content-Type: application/json'); // Ensure this is the very first thing in your file.
+function defineEventHandler($event) {
+    // Simulating an event handler in PHP
+    if ($event === 'secret') {
+        return ['secret' => 'The cake is a lie'];
+    } else {
+        return ['error' => 'Event not found'];
+    }
+}
 
-// Rest of your code
-echo '{"secret":"The cake is a lie"}';
+// Usage example:
+$result = defineEventHandler('secret');
+header('Content-Type: application/json');
+echo json_encode($result);
