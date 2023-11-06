@@ -1,5 +1,6 @@
 <?php
-header('Content-Type: application/json; charset=utf-8'); // Ensure this is the very first thing in your file.
+header('Content-Type: application/json'); // Ensure this is the very first thing in your file.
 
+$api = '{"secret":"The cake is a lie"}';
 // Rest of your code
-echo '{"secret":"The cake is a lie"}';
+echo $api;
