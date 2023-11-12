@@ -15,7 +15,7 @@ Prerekvizity
 
 ```
     docker build . -t tda-php
-    docker run -p 8080:80 -v ${pwd}:/app tda-php
+    docker run -p 8080:80 -v ${PWD}:/app tda-php
 ```
 
 

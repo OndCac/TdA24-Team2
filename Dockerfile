@@ -13,7 +13,7 @@ RUN a2enmod rewrite
 COPY . /app
 
 # Copy the application code to the container
-COPY ./php /var/www/html
+COPY ./public /var/www/html
 
 # Update the Apache configuration to point to /var/www/html/www (where your index.php is)
 RUN echo '<VirtualHost *:80>\n\

@@ -19,14 +19,15 @@ Require all granted
     RewriteCond %{REQUEST_FILENAME} -f
     RewriteRule /\.|^\.(?!well-known/) - [F]
 
-    # Map requests without file extensions to corresponding PHP files
-    RewriteCond %{REQUEST_FILENAME}.php -f
-    RewriteRule ^([^/]+)/?$ $1.php [L]
+    # General rule: try appending .php to the requested URL, only if it doesn't end with .php
+    RewriteCond %{REQUEST_FILENAME} !\.php$
+    RewriteRule ^([^/]+)$ $1.php [L]
 
-    # front controller
+    # Rewrite all other requests to index.php
+    # If the requested file does not exist, rewrite to index.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule !\.(pdf|js|mjs|ico|gif|jpg|jpeg|png|webp|svg|css|rar|zip|7z|tar\.gz|map|eot|ttf|otf|woff|woff2)$ index.php [L]
+    RewriteRule ^ index.php [L]
 </IfModule>
 
 # enable gzip compression
