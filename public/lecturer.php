@@ -1,7 +1,7 @@
 <?php
 
 // Path to the JSON file
-$jsonFilePath = __DIR__ . '/../database/json/lecturer.json';
+$jsonFilePath = $_SERVER['DOCUMENT_ROOT'] . '/../database/json/lecturer.json';
 
 // Read JSON data from the file
 $jsonData = file_get_contents($jsonFilePath);
