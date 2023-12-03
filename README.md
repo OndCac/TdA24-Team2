@@ -16,6 +16,9 @@ Prerekvizity
 ```
     docker build . -t tda-php
     docker run -p 8080:80 -v ${PWD}:/app tda-php
+
+    docker ps
+    docker stop jmeno_kontejneru
 ```
 
 

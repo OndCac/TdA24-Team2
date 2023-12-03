@@ -1,13 +1,19 @@
 <?php
+$jsonFilePath = __DIR__ . '/../database/json/lecturer.json';
 
-// Path to the JSON file
-$jsonFilePath = $_SERVER['DOCUMENT_ROOT'] . '/../database/json/lecturer.json';
+echo "JSON File Path: $jsonFilePath";
 
-// Read JSON data from the file
+if (file_exists($jsonFilePath)) {
+    echo "File exists!";
+} else {
+    echo "File does not exist!";
+}
+
+// Read the JSON file
 $jsonData = file_get_contents($jsonFilePath);
 
 // Decode JSON data
-$profileData = json_decode($jsonData, true);
+$lecturerData = json_decode($jsonData, true);
 
 ?>
 
